@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Define your custom font stacks */
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-serif: "Lora", "Georgia", "serif";
+}
+
+@layer base {
+  /* Set the default text to Sans (Inter) */
+  html,
+  body {
+    @apply font-sans;
+  }
+
+  /* Set all headings to Serif (Lora) */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+.router-link-active:not(.brand-logo),
+.router-link-exact-active:not(.brand-logo) {
+  @apply bg-primary text-primary-content;
+}
+
+.wrapper {
+  @apply max-w-[1400px] mx-auto w-full;
+}
+
+@plugin "daisyui/theme" {
+  name: "spellenkast";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: hsl(40, 50%, 98%);
+  --color-base-200: hsl(43, 33%, 96%);
+  --color-base-300: rgb(231, 225, 218);
+  --color-base-content: #32241b;
+  --color-primary: hsl(28, 80%, 45%);
+  --color-primary-content: hsl(35, 49%, 93%);
+  --color-secondary: #23365c;
+  --color-secondary-content: #c3c6cc;
+  --color-accent: #e7b008;
+  --color-accent-content: #32241b;
+  --color-neutral: hsl(32, 21%, 88%);
+  --color-neutral-content: hsl(26, 13%, 66%);
+  --color-info: oklch(91% 0.08 205.041);
+  --color-info-content: oklch(45% 0.085 224.283);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: #dc2828;
+  --color-error-content: #f8e5e3;
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.21875rem;
+  --size-field: 0.21875rem;
+  --border: 2px;
+}

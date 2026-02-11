@@ -1,0 +1,1 @@
+ALTER TABLE "boardGamesExpansions" RENAME COLUMN "bbg_best_players" TO "bgg_best_players";
